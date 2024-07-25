@@ -1,0 +1,15 @@
+{
+  "name": "Mark Brown",
+  "position": "Chief Technical Officer",
+  "company": "Innovatech",
+  "email": "mark.brown@innovatech.io",
+  "phone": {
+    "office": "+9876543210",
+    "cell": "+1928374650"
+  },
+  "address": "",
+  "social": {
+    "LinkedIn": "",
+    "Twitter": ""
+  }
+}
