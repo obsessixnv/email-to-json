@@ -36,3 +36,28 @@ email-signature-extraction/
   </li>
   <li>The script will generate JSON files (<code>output_llama3.json</code> and <code>output_mixtral.json</code>) containing the extracted information from the email signatures.</li>
 </ol>
+<h2>Comparison Summary</h2>
+
+<h3>Core Fields</h3>
+<ul>
+  <li><strong>Name:</strong> Both models correctly extract the name.</li>
+  <li><strong>Position:</strong>  Both are accurate.</li>
+  <li><strong>Company:</strong> Both models accurately extract the company name.</li>
+  <li><strong>Email:</strong> Both models correctly extract the email address.</li>
+  <li><strong>Address:</strong> Both leave the address field empty if not provided.</li>
+</ul>
+
+<h3>Phone Number Extraction</h3>
+<ul>
+  <li><strong>Llama:</strong> Merges phone numbers into a single field (e.g., "Cell: +1928374650").</li>
+  <li><strong>Mixtral:</strong> Provides structured details with separate fields for office and cell numbers (e.g., { "office": "+9876543210", "cell": "+1928374650" }).</li>
+</ul>
+
+<h3>Social Media Information</h3>
+<ul>
+  <li><strong>Llama:</strong> Includes an empty or unclear social media field (e.g., { "": "" }).</li>
+  <li><strong>Mixtral:</strong> Provides structured placeholders for social media (e.g., { "LinkedIn": "", "Twitter": "" }).</li>
+</ul>
+
+<h3>Recommendation</h3>
+<p><strong>Mixtral</strong> is recommended for more detailed and structured information, especially for phone numbers and social media. <strong>Llama</strong> is suitable for simpler outputs where detailed structure is less critical.</p>
