@@ -21,7 +21,7 @@ def get_chat_completion(model):
                     "content": """Please extract and structure all relevant information from the email signature into a JSON format. Ensure to include the following fields:
 
 - Name
-- Title
+- Position
 - Company
 - Email
 - Phone
@@ -43,7 +43,7 @@ Twitter: @johndoe
 Expected JSON Format:
 {
     "name": "John Doe",
-    "title": "Senior Software Engineer",
+    "position": "Senior Software Engineer",
     "company": "Tech Company",
     "email": "john.doe@example.com",
     "phone": "123-456-7890",
@@ -86,7 +86,7 @@ Extract and structure the information accurately according to this format and no
 Just a quick note to remind you about the upcoming deadline.
 
 Cheers,
-Tom (name after "Cheers" is "name" field)
+Tom (name after "Cheers" or "Best" is "name" field)
 Customer Support""",
                 },
                 {
